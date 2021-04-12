@@ -1,5 +1,6 @@
 html {
   box-sizing: border-box;
+  background-color: rgb(219, 219, 219);
 }
 
 *,
@@ -96,7 +97,7 @@ h1 {
   font-weight: 600;
   font-size: 40px;
   line-height: 63px;
-  color: #FFFFFF;
+  color: #ffffff;
   word-spacing: 30px;
 }
 
@@ -200,6 +201,9 @@ footer p {
   /* Hero section */
   .hero-text {
     width: 55%;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   .form-wrapper {
@@ -207,8 +211,11 @@ footer p {
   }
 }
 
-
 @media (max-width: 800px) {
+  body {
+    background-size: 100vh 500px;
+    background-position: top center;
+  }
   /* Header */
   img {
     width: 100px;
@@ -224,11 +231,16 @@ footer p {
 
   .hero-text {
     width: 100%;
-    padding: 50px 0;
+    padding: 50px 20px;
+  }
+  .form-wrapper h2,
+  .form-wrapper p {
+    color: rgb(34, 34, 34);
   }
 
   .form-wrapper {
-    width: 100%;
+    width: 70%;
+    margin-top: 20px;
   }
 
   form {
@@ -236,11 +248,13 @@ footer p {
   }
 }
 
-
-@media (max-width: 500px) {
+@media (max-width: 600px) {
+  body {
+    background-size: 100vh 420px;
+    background-position: top center;
+  }
   /* Header */
   header {
-    padding: 0;
     flex-direction: column;
     align-items: flex-start;
   }
@@ -269,6 +283,9 @@ footer p {
     padding: 0;
     margin-top: 10px;
   }
+  .hero-text {
+    padding: 30px 0;
+  }
 
   h1 {
     font-size: 30px;
@@ -284,7 +301,10 @@ footer p {
     font-size: 16px;
     line-height: 21px;
   }
-
+  .form-wrapper {
+    width: 90%;
+    margin-top: 20px;
+  }
   form {
     width: 100%;
   }
@@ -294,46 +314,9 @@ footer p {
     flex-direction: column;
   }
 }
-
-
-/* @media (max-width: 768px) {
+@media (max-width: 400px) {
   body {
-    height: unset;
+    background-size: 100vh 75vh;
+    background-position: top center;
   }
-  section {
-    padding: 0;
-  }
-  header {
-    width: 100%;
-    padding: 0 20px;
-  }
-  nav {
-    width: unset;
-  }
-  nav.ul {
-    font-size: 16px;
-  }
-  nav ul li {
-    margin: 0 10px;
-  }
-  .hero {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0 60px;
-  }
-  .hero-text {
-    width: 100%;
-    margin-bottom: 100px;
-  }
-  h1 {
-    text-align: center;
-  }
-  form {
-    width: 70%;
-    margin-bottom: 50px;
-  }
-  footer {
-    position: unset;
-  }
-} */
+}
