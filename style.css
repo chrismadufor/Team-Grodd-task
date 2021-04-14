@@ -66,12 +66,23 @@ nav ul li a {
   text-decoration: none;
   color: #fff;
 }
+/* Well, display none and setting the opacity work the same way. I think display none is better anyway and the opacityis just there for the responsive menu. */
+#navlinks-sm {
+  display: none;
+  width: 100%;
+  position: absolute;
+  height: 100vh;
+  padding-top: 110px;
+  opacity: 0;
+  background-color: #114960e0;
+}
 
 .toggle-btn {
   display: none;
   position: absolute;
   right: 0;
   top: 0;
+  z-index: 2;
 }
 
 .underline {
@@ -158,7 +169,7 @@ select:focus {
 .button {
   display: flex;
   justify-content: center;
-  width: 40%;
+  width: 60%;
   margin: 10px auto 0 auto;
   background-color: #3198d0;
   color: #eee;
@@ -259,21 +270,31 @@ footer p {
     align-items: flex-start;
   }
 
-  nav {
+  .navlinks-lg {
     display: none;
     width: 100%;
     border-bottom: 2px solid #dbdada;
   }
-
+  /* Making the nav menu to be the same height as the hero text. I guuess it looks better that way */
+  nav#navlinks-sm.active {
+    display: block;
+    height: 420px;
+    opacity: 1;
+  }
+  /* #navlinks-sm ul {
+  }
   nav.active {
     display: inline;
-  }
+    position: absolute;
+    padding-top: 50px;
+  } */
 
   .toggle-btn {
     display: flex;
   }
 
-  nav ul {
+  #navlinks-sm ul {
+    display: flex;
     flex-direction: column;
     align-items: center;
   }
@@ -304,8 +325,12 @@ footer p {
   .form-wrapper {
     width: 90%;
     margin-top: 20px;
+    text-align: center;
   }
   form {
+    width: 100%;
+  }
+  .button {
     width: 100%;
   }
 
@@ -316,7 +341,40 @@ footer p {
 }
 @media (max-width: 400px) {
   body {
-    background-size: 100vh 75vh;
+    background-size: 100vh 450px;
     background-position: top center;
+  }
+  .hero-text {
+    padding: 10px 0 40px 0;
+  }
+  section {
+    padding: 10px;
+  }
+  /* Doing it again */
+  nav#navlinks-sm.active {
+    height: 450px;
+  }
+}
+/* This media query is for Galaxy fold mainly. */
+@media (max-width: 300px) {
+  body {
+    background-size: 100vh 500px;
+    background-position: top center;
+  }
+  .hero-text {
+    padding: 20px 0 30px 0;
+    /* margin-bottom: 20px; */
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 14px;
   }
 }

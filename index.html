@@ -5,14 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+    />
     <title>Welcome to Zuri x I4G Page</title>
   </head>
-  <body>
-    <!-- Work on the title man -->
-    <!-- Zuri Team or Zuri Training -->
-    <section class="main">
+  <!-- -----DISCLAIMER-------- -->
+  <!-- This is not the best piece of code in terms of the structure of the site but you can learn from it -->
 
+  <body>
+    <!-- This nav block below will be used for the responsive design. It is a copy of the main nav just with a different id name. It is a direct child of the body element so that when its position is set to absolute, it automatically appears on top of others
+    -sm stands for 'small screens' and -lg stands for 'large screens' -->
+
+    <nav id="navlinks-sm">
+      <ul>
+        <li><a href="#" class="underline">Home</a></li>
+        <li><a href="#"></a>About</li>
+        <li><a href="#"></a>FAQ</li>
+        <li><a href="#"></a>Login</li>
+      </ul>
+    </nav>
+    <section class="main">
       <!-- Header -->
       <header>
         <div class="logo">
@@ -21,7 +37,7 @@
         <div class="toggle-btn" id="toggle-btn">
           <i class="fas fa-bars fa-2x"></i>
         </div>
-        <nav id="navlinks">
+        <nav class="navlinks-lg">
           <ul>
             <li><a href="#" class="underline">Home</a></li>
             <li><a href="#"></a>About</li>
@@ -34,17 +50,17 @@
       <!-- Hero section -->
       <div class="hero">
         <div class="hero-text">
-          <!-- <h1>
-            Learn. <span class="build" style="font-size: 50px">Build</span>.
-            <span style="font-size: 64px">Grow</span>.
-          </h1> -->
           <h1>Learn. Build. Grow.</h1>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            Ullamcorper sit amet risus nullam eget. In iaculis nunc sed augue lacus. Mattis pellentesque id nibh tortor. Neque ornare aenean euismod elementum nisi quis eleifend quam.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ullamcorper sit amet risus nullam eget. In iaculis nunc sed augue
+            lacus. Mattis pellentesque id nibh tortor. Neque ornare aenean
+            euismod elementum nisi quis eleifend quam.
           </p>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
         </div>
         <div class="form-wrapper">
@@ -63,7 +79,7 @@
               <option value="Backend">Backend</option>
               <option value="Design">Design</option>
               <option value="Mobile">Mobile</option>
-  
+
               <!-- Confirm the tracks properly -->
             </select>
             <input type="submit" value="Register" class="button" />

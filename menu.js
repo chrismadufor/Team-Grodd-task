@@ -1,5 +1,5 @@
 const toggleBtn = document.getElementById('toggle-btn');
-const dropdownMenu = document.getElementById('navlinks');
+const dropdownMenu = document.getElementById('navlinks-sm');
 
 const toggleFunction = () => {
     dropdownMenu.classList.toggle('active');
